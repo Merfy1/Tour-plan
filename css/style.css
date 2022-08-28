@@ -4,4 +4,75 @@
 
 body {
   font-family: "Mulish", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.header__search {
+  margin-right: auto;
+  margin-left: 108px;
+}
+
+.search {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  border-radius: 6px;
+}
+.search__input {
+  width: 350px;
+  height: 100%;
+  padding-left: 23px;
+  padding-right: 75px;
+  background-color: #F5FAFE;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #333333;
+}
+.search__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 65px;
+  border: none;
+  background-color: #EC1F46;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.user__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user__name {
+  margin-left: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
 }/*# sourceMappingURL=style.css.map */
