@@ -341,6 +341,77 @@ img {
   overflow: hidden;
 }
 
+.newsletter {
+  padding: 98px 0 87px 0;
+  background-image: url(../img/newsletter-bg.jpeg);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.newsletter:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 34, 61, 0.8);
+}
+.newsletter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 731px;
+  margin: auto;
+}
+.newsletter-title {
+  color: #fff;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+.newsletter-title__strong {
+  display: block;
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.subscibe {
+  position: relative;
+  width: 350px;
+  height: 55px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.subscibe__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 33px;
+  padding-right: 75px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
+.subscibe__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border: none;
+  background-color: #EC1F46;
+  color: #fff;
+  min-width: 65px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -393,7 +464,7 @@ img {
     width: 340px;
   }
   .slider {
-    width: 100%;
+    max-width: 100%;
   }
   .map {
     width: 340px;

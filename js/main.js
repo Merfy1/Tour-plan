@@ -13,4 +13,12 @@ const swiper = new Swiper('.swiper', {
         onlyInViewport: false,
         pageUpDown: true,
       },
+    // autoplay: {
+    //   delay: 2000,
+    // },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
   });
+  
