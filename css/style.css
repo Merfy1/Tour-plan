@@ -348,6 +348,7 @@ img {
   position: relative;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 .newsletter:before {
   content: "";
@@ -416,7 +417,7 @@ img {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel__slider {
     max-width: 590px;
   }
   .swiper-slide__image {
@@ -427,7 +428,8 @@ img {
   }
 }
 @media (max-width: 992px) {
-  .container {
+  .container,
+.newsletter-wrapper {
     max-width: 700px;
   }
   .logo {
@@ -531,6 +533,12 @@ img {
   .map {
     width: 100%;
   }
+  .newsletter-wrapper {
+    flex-direction: column;
+    max-width: 576px;
+    width: 92%;
+    align-items: flex-start;
+  }
 }
 @media (max-width: 576px) {
   .logo {
@@ -541,5 +549,23 @@ img {
   }
   .hotel__slider {
     margin-bottom: 20px;
+  }
+  .newsletter {
+    padding: 76px 0 83px 0;
+  }
+  .newsletter-title {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 5px;
+  }
+  .newsletter-title__strong {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .newsletter__title {
+    margin-bottom: 37px;
+  }
+  .subscribe {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

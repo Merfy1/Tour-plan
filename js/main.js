@@ -21,4 +21,3 @@ const swiper = new Swiper('.swiper', {
       crossFade: true
     },
   });
-  
