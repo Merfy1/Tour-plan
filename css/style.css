@@ -136,6 +136,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 .hotel-info__offer {
   margin-left: 14px;
@@ -146,7 +147,7 @@ img {
   margin-bottom: 0px;
 }
 .hotel-info__description {
-  margin: 5px 0;
+  margin: 5px;
 }
 .hotel-name {
   font-size: 24px;
@@ -190,6 +191,51 @@ img {
 .rating__couneter {
   font-size: 14px;
   line-height: 18px;
+}
+
+.swiper {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  border-radius: 8px;
+}
+.swiper:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 122, 223, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  z-index: 10;
+}
+
+.slider {
+  width: 728px;
+}
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+}
+.slider-button--next {
+  right: 18px;
+  background-image: url(../img/arrow-right.svg);
+}
+.slider-button--prev {
+  left: 18px;
+  background-image: url(../img/arrow-left.svg);
 }
 
 @media (max-width: 1200px) {
@@ -249,7 +295,7 @@ img {
     background-color: #333333;
   }
   .stars {
-    flex-basis: content;
+    flex-basis: auto;
   }
   .hotel-name {
     flex-basis: 100%;
