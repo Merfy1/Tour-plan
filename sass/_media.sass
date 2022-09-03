@@ -4,12 +4,11 @@
     .hotel__slider
         max-width: 590px
     .swiper
-        &-slide
+        &-slider
             &__image
                 height: 100%
                 width: 100%
                 object-fit: cover
-
 @media (max-width: 992px)
     .container, 
     .newsletter-wrapper
@@ -38,12 +37,16 @@
             margin-bottom: 30px
         &-right
             flex-direction: row
+        &-slider
+            max-width: 100%
     .booking
         width: 340px
-    .slider
-        max-width: 100%
     .map
         width: 340px
+    .reviews
+        &-slider
+            &__item
+                max-width: 580px
 @media (max-width: 768px)
     .container
         max-width: 576px
@@ -85,12 +88,12 @@
             &__offer
                 order: -1
                 margin-left: 0
-    .slider
-        height: 350px
     .hotel
         &-right
             flex-direction: column
             min-height: 450px
+        &-slider
+            height: 350px
     .booking
         width: 100%
     .map
@@ -101,14 +104,30 @@
             max-width: 576px
             width: 92%
             align-items: flex-start
+    .reviews
+        &-slider
+            &__button
+                top: 32px
+                &--prev
+                    right: 50%
+                    margin-right: -65px
+                    transform: translate(50%, 0)
+                &--next
+                    left: 50%
+                    margin-left: -65px
+                    transform: translate(-50%, 0)
+            &__item
+                padding: 0 30px 30px
+                &:after, &:before
+                    display: none 
 @media (max-width: 576px)
     .logo
         width: 99px
-    .slider
-        height: 250px
     .hotel
         &__slider
             margin-bottom: 20px
+        &-slider
+            height: 250px
     .newsletter
         padding: 76px 0 83px 0
         &-title
@@ -121,7 +140,14 @@
         &__title
             margin-bottom: 37px
     .subscribe
-        width: 100%
+        max-width: 100%
+    .reviews
+        &__title
+            font-size: 18px   
+            line-height: 23px
+        &-slider
+            &__item
+                max-width: 300px
     
 
 

@@ -468,13 +468,13 @@ img {
   cursor: pointer;
   z-index: 99;
 }
-.reviews-slider__button--prev {
-  background-image: url(../img/reviews-arrow-prev.svg);
-  right: 0px;
-}
 .reviews-slider__button--next {
   background-image: url(../img/reviews-arrow-next.svg);
   left: 0px;
+}
+.reviews-slider__button--prev {
+  background-image: url(../img/reviews-arrow-prev.svg);
+  right: 0px;
 }
 .reviews-slider__profile {
   display: flex;
@@ -524,7 +524,7 @@ img {
   .hotel__slider {
     max-width: 590px;
   }
-  .swiper-slide__image {
+  .swiper-slider__image {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
@@ -566,14 +566,17 @@ img {
   .hotel-right {
     flex-direction: row;
   }
+  .hotel-slider {
+    max-width: 100%;
+  }
   .booking {
     width: 340px;
   }
-  .slider {
-    max-width: 100%;
-  }
   .map {
     width: 340px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 @media (max-width: 768px) {
@@ -624,12 +627,12 @@ img {
     order: -1;
     margin-left: 0;
   }
-  .slider {
-    height: 350px;
-  }
   .hotel-right {
     flex-direction: column;
     min-height: 450px;
+  }
+  .hotel-slider {
+    height: 350px;
   }
   .booking {
     width: 100%;
@@ -643,16 +646,35 @@ img {
     width: 92%;
     align-items: flex-start;
   }
+  .reviews-slider__button {
+    top: 32px;
+  }
+  .reviews-slider__button--prev {
+    right: 50%;
+    margin-right: -65px;
+    transform: translate(50%, 0);
+  }
+  .reviews-slider__button--next {
+    left: 50%;
+    margin-left: -65px;
+    transform: translate(-50%, 0);
+  }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item:after, .reviews-slider__item:before {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
   .logo {
     width: 99px;
   }
-  .slider {
-    height: 250px;
-  }
   .hotel__slider {
     margin-bottom: 20px;
+  }
+  .hotel-slider {
+    height: 250px;
   }
   .newsletter {
     padding: 76px 0 83px 0;
@@ -670,6 +692,13 @@ img {
     margin-bottom: 37px;
   }
   .subscribe {
-    width: 100%;
+    max-width: 100%;
+  }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .reviews-slider__item {
+    max-width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */
