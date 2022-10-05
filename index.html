@@ -12,13 +12,13 @@
     <title>Best Tour-Plan - Hotel Booking</title>
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar navbar--mobile_fixed">
         <div class="container">
             <div class="navbar-top">
                 <a href="#" class="logo">
                     <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image">
                 </a>
-                <form action="#" class="search navbar__search">
+                <form action="#" class="search navbar__search navbar__search--mobile_hiden">
                     <input 
                         type="text" 
                         class="search__input" 
@@ -28,7 +28,7 @@
                         <img src="img/search.svg" alt="search">
                     </button>
                 </form>
-                <a href="#" class="user navbar__user">
+                <a href="#" class="user navbar__user navbar__user--mobile_hiden">
                     <img
                     src="img/user_avatar.jpeg" 
                     alt="avatar" 
@@ -45,6 +45,27 @@
         <div class="navbar-bottom">
             <div class="container">
                 <ul class="navbar-menu">
+                    <li class="navbar-menu__item navbar-menu__item--mobile_visible" >
+                        <a href="#" class="user navbar__user navbar__user--mobile_visible">
+                            <img
+                            src="img/user_avatar.jpeg" 
+                            alt="avatar" 
+                            class="user__avatar">
+                            <span class="user__name user__name--light">Nathan</span>
+                        </a>
+                    </li>
+                    <li class="navbar-menu__item navbar-menu__item--mobile_visible">
+                        <form action="#" class="search navbar__search navbar__search--mobile_visible">
+                            <input 
+                                type="text" 
+                                class="search__input" 
+                                placeholder="Search Location"
+                            />
+                            <button class="search__button">
+                                <img src="img/search.svg" alt="search">
+                            </button>
+                        </form>
+                    </li>
                     <li class="navbar-menu__item">
                         <a href="#" class="navbar-menu__link">All Deals</a>
                     </li>
@@ -176,7 +197,7 @@
                                 <span class="booking__num">12100</span>
                             </a>
                         </div>
-                        <button class="button booking__button">View Other Options</button>
+                        <button data-toggle="modal" class="button booking__button">View Other Options</button>
                     </div>
                     <!-- /.booking -->
                     <div class="map">
@@ -401,16 +422,35 @@
                     <form action="#" class="footer__form">
                         <input type="text" class="input footer__input" placeholder="Your Full Name*">
                         <input type="text" class="input footer__input" placeholder="Phone Number*">
-                        <textarea class="footer__message" placeholder="Message" cols="30" rows="10"></textarea>
+                        <textarea class="message footer__message" placeholder="Message" cols="30" rows="10"></textarea>
                         <button class="button footer__button" type="submit">Send</button>
                         <span class="footer__info">* Required Fields</span>
                     </form>
-
                 </div>
             </div>
         </div>
     </footer>
     <!-- /.footer -->
+    <div class="modal">
+        <div class="modal__overlay">
+        </div>
+        <div class="modal__dialog">
+            <a href="" class="modal__close">
+                <img src="img/close.svg" alt="close">
+            </a>
+            <h3 class="modal__title modal__title--mb-3">Send us message</h3>
+            <form action="#" class="modal__form">
+                <input type="text" class="input modal__input" placeholder="Your Full Name*">
+                <input type="text" class="input modal__input" placeholder="Phone Number*">
+                <input type="text" class="input modal__input" placeholder="Email*">
+                <textarea class="message modal__message" placeholder="Message" cols="30" rows="10"></textarea>
+                <button class="button modal__button" type="submit">Send</button>
+                <span class="modal__info">* Required Fields</span>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -1,4 +1,5 @@
-const hotelSlider = new Swiper('.hotel-slider', {
+$(document).ready(function () {
+  const hotelSlider = new Swiper('.hotel-slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -43,4 +44,28 @@ const reviewsSlider = new Swiper('.reviews-slider', {
   fadeEffect: {
     crossFade: true
   },
+});
+  var menuButton = document.querySelector(".menu-button");
+  menuButton.addEventListener('click', function(){
+    console.log("Клик по кнопке меню")
+    document.querySelector(".navbar-bottom").classList.toggle('navbar-bottom--visible');
+  })
+  var modalButton = $('[data-toggle=modal]');
+  var modalClose = $(['data-toggle=modal__close']);
+
+  modalButton.on('click', openModal);
+  modalClose.on('click', closeModal);
+  function openModal(){
+    var modalOverlay = $('.modal__overlay');
+    var modalDialog = $('.modal__dialog');
+    modalOverlay.addClass('modal__overlay--visible');
+    modalDialog.addClass('modal__dialog--visible');
+  };
+  function closeModal(){
+    var modalOverlay = $('.modal__overlay');
+    var modalDialog = $('.modal__dialog');
+    modalOverlay.removeClass('modal__overlay--visible');
+    modalDialog.removeClass('modal__dialog--visible');
+  };
+
 });
